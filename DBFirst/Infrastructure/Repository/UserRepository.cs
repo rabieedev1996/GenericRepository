@@ -1,10 +1,10 @@
 ﻿using CodeFirst.DBContext;
 using CodeFirst.Entities;
-using CodeFirst.Repositories.Interface;
+using CodeFirst.Infrastructure.Interface;
 
-namespace CodeFirst.Repositories.Repository
+namespace CodeFirst.Infrastructure.Repository
 {
-    public class UserRepository : GenericRepository<User>, IUserRepository
+    public class UserRepository : BaseRepository<User>, IUserRepository
     {
         public UserRepository(Context dbContext) : base(dbContext)
         {

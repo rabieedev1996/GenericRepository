@@ -1,9 +1,9 @@
 ﻿using CodeFirst.Entities;
 using System.Linq.Expressions;
 
-namespace CodeFirst.Repositories.Interface
+namespace CodeFirst.Infrastructure.Interface
 {
-    public interface IGenericRepository<TEtity> where TEtity : EntityBase
+    public interface IBaseRepository<TEtity> where TEtity : EntityBase
     {
         Task<IReadOnlyList<TEtity>> GetAllAsync();
         Task<IReadOnlyList<TEtity>> GetAsync(Expression<Func<TEtity, bool>> predicate);

@@ -1,16 +1,16 @@
 ﻿using CodeFirst.DBContext;
 using CodeFirst.Entities;
-using CodeFirst.Repositories.Interface;
+using CodeFirst.Infrastructure.Interface;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 
-namespace CodeFirst.Repositories.Repository
+namespace CodeFirst.Infrastructure.Repository
 {
-    public class GenericRepository<TEntity> :IGenericRepository<TEntity> where TEntity : EntityBase
+    public class BaseRepository<TEntity> :IBaseRepository<TEntity> where TEntity : EntityBase
     {
         protected readonly Context _dbContext;
 
-        public GenericRepository(Context dbContext)
+        public BaseRepository(Context dbContext)
         {
             _dbContext = dbContext ?? throw new ArgumentNullException(nameof(dbContext));
         }

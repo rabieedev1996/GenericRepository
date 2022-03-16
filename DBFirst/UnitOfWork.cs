@@ -1,6 +1,6 @@
 ﻿using CodeFirst.DBContext;
-using CodeFirst.Repositories.Interface;
-using CodeFirst.Repositories.Repository;
+using CodeFirst.Infrastructure.Interface;
+using CodeFirst.Infrastructure.Repository;
 
 namespace CodeFirst
 {
@@ -24,7 +24,7 @@ namespace CodeFirst
                 return productRepository;
             }
         }
-        public IUserRepository users
+        public IUserRepository Users
         {
             get
             {
